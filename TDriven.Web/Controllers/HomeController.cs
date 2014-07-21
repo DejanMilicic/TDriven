@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-
+﻿
 namespace TDriven.Web.Controllers
 {
+	using System.Web.Mvc;
 	using TDriven.Core.Service;
 
 	public class HomeController : Controller
@@ -19,7 +15,7 @@ namespace TDriven.Web.Controllers
 
 		public ActionResult Index()
 		{
-			return View(this.productService.FindAll(x => x.Name.StartsWith("N")));
+			return View(this.productService.FindAll(criteria: x => x.Name.StartsWith("N")));
 		}
 
 		public ActionResult About()

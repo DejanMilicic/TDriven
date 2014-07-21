@@ -255,6 +255,10 @@
       <Project>{2117b7a7-577c-4eda-bc8d-935cd2e06bf3}</Project>
       <Name>TDriven.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TDriven.Infrastructure\TDriven.Infrastructure.csproj">
+      <Project>{f87b0932-2430-44ed-a4b6-f658e9884e4d}</Project>
+      <Name>TDriven.Infrastructure</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

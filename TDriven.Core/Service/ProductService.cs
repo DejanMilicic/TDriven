@@ -2,15 +2,14 @@
 namespace TDriven.Core.Service
 {
 	using TDriven.Core.Domain;
-	using TDriven.Core.EntityFramework;
-	using TDriven.Core.Repository;
+	using TDriven.Infrastructure.Providers;
+	using TDriven.Infrastructure.Services;
 
-	public class ProductService :
-		Service<EntityFramework.Db, Product>,
-		IProductService
+	public class ProductService : Service<Product>, IProductService
 	{
-		public ProductService(Repository<Db, Product> repository)
-			: base(repository)
-		{ }
+		public ProductService(IDbContextProvider dbContextProvider) : base(dbContextProvider)
+		{
+			
+		}
 	}
 }

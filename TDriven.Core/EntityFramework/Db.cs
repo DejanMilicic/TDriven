@@ -14,6 +14,8 @@ namespace TDriven.Core.EntityFramework
 			Database.Initialize(false);
 		}
 
-		public DbSet<Product> Products { get; set; }
+		public IDbSet<Product> Products { get; set; }
+
+
 	}
 }
