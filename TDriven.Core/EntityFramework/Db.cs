@@ -10,12 +10,15 @@ namespace TDriven.Core.EntityFramework
 	{
 		public Db(): base("TDriven")
 		{
+			// Turn off lazy loading for performance increase, use eager loading - .Include()
+			Configuration.LazyLoadingEnabled = false;
+			Configuration.ProxyCreationEnabled = false;
+
 			Database.SetInitializer(new MigrateDatabaseToLatestVersion<Db, Configuration>());
 			Database.Initialize(false);
 		}
 
-		public IDbSet<Product> Products { get; set; }
-
-
+		public DbSet<Product> Products { get; set; }
+		public DbSet<Company> Companies { get; set; }
 	}
 }
