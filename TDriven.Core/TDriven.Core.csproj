@@ -62,6 +62,10 @@
     <Compile Include="Migrations\201407201029172_Rename_Manufacturer_To_Company.Designer.cs">
       <DependentUpon>201407201029172_Rename_Manufacturer_To_Company.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201407231916038_Remove_Pluralization.cs" />
+    <Compile Include="Migrations\201407231916038_Remove_Pluralization.Designer.cs">
+      <DependentUpon>201407231916038_Remove_Pluralization.cs</DependentUpon>
+    </Compile>
     <Compile Include="Providers\DbContextProvider.cs" />
     <Compile Include="Migrations\201406031610274_Initial.cs" />
     <Compile Include="Migrations\201406031610274_Initial.Designer.cs">
@@ -85,6 +89,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201407201029172_Rename_Manufacturer_To_Company.resx">
       <DependentUpon>201407201029172_Rename_Manufacturer_To_Company.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201407231916038_Remove_Pluralization.resx">
+      <DependentUpon>201407231916038_Remove_Pluralization.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
