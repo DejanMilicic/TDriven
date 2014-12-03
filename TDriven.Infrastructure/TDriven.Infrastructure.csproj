@@ -50,8 +50,6 @@
     <Compile Include="Interfaces\IService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\IDbContextProvider.cs" />
-    <Compile Include="Repository\IRepository.cs" />
-    <Compile Include="Repository\Repository.cs" />
     <Compile Include="Services\OrderBy.cs" />
     <Compile Include="Services\Service.cs" />
   </ItemGroup>

@@ -17,26 +17,22 @@
 
 
 namespace TDriven.Web.DependencyResolution {
-    using StructureMap;
+	using StructureMap;
 	using StructureMap.Graph;
-    using StructureMap.Web;
-	using StructureMap.Web.Pipeline;
-
-    using TDriven.Core.Repository;
 
 	public static class IoC {
-        public static IContainer Initialize() {
-            ObjectFactory.Initialize(x =>
-                        {
-                            x.Scan(scan =>
-                                    {
-                                        scan.TheCallingAssembly();
+		public static IContainer Initialize() {
+			ObjectFactory.Initialize(x =>
+						{
+							x.Scan(scan =>
+									{
+										scan.TheCallingAssembly();
 										scan.Assembly("TDriven.Core");
-                                        scan.WithDefaultConventions();
-                                    });
-							x.For(typeof(IRepository<,>)).Use(typeof(Repository<,>));
-                        });
-            return ObjectFactory.Container;
-        }
-    }
+										scan.WithDefaultConventions();
+									});
+							//x.For(typeof(IRepository<,>)).Use(typeof(Repository<,>));
+						});
+			return ObjectFactory.Container;
+		}
+	}
 }
